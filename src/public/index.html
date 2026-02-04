@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CYLOCK</title>
+  <link rel="stylesheet" href="../css/welcome.css">
+</head>
+
+<body>
+
+<!-- So i am using some photos foe the icon we can change it later -->
+<div class="desktop">
+    <!-- So lis is for level 1 .. like how an actual desktop looks  -->
+  <div class="icon" onclick="openFolder('level1')">
+    <img class="icon-img" src="../assets/images/folder.png" alt="Level 1">
+    <span>Level 1</span>
+  </div>
+
+<!-- LSo when the levvel 1 folder is clicked it becomes hidden  -->
+<div id="level1-window" class="retro-window center hidden">
+  <div class="window-content">
+    <h2>Level 1</h2>
+    <div class="desktop-level1">
+<!-- So this openfeatute is yet to be implemented   -->
+      <div class="icon" onclick="openFeature('phishing')">
+        <img class="icon-img" src="../assets/images/phishing.png" alt="Phishing Test">
+        <span>Phishing<br>Test</span>
+      </div>
+
+      <div class="icon" onclick="openFeature('password')">
+        <img class="icon-img" src="../assets/images/password.png" alt="Password Check">
+        <span>Password<br>Check</span>
+      </div>
+
+      <div class="icon" onclick="openFeature('social')">
+        <img class="icon-img" src="../assets/images/social.png" alt="Social Engineering">
+        <span>Social<br>Eng.</span>
+      </div>
+
+      <div class="icon" onclick="openFeature('about')">
+        <img class="icon-img" src="../assets/images/about.png" alt="About">
+        <span>About</span>
+      </div>
+
+    </div>
+    <button onclick="closeFolder('level1')">Close</button>
+  </div>
+</div>
+<!-- this is the main window -->
+<div class="retro-window center">
+  <div class="window-content">
+
+    <img class="shield" src="../assets/images/logo.png" alt="Shield">
+    <h1>Welcome to CyLock</h1>
+    <p class="subtitle">Retro Security Awareness Platform</p>
+
+    <div class="info-box">
+      <p>Test your cybersecurity awareness with interactive challenges!</p>
+      <p>Double-click the desktop icons to begin your training.</p>
+    </div>
+
+    <button class="primary-btn">Get Started</button>
+
+  </div>
+</div>
+
+<!-- Taskbar -->
+<div class="taskbar">
+  <button class="start-btn"> Start</button>
+  <div class="clock" id="clock"></div>
+</div>
+
+<script src="../js/windows.js"></script>
+</body>
+</html>

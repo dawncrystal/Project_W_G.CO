@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background: #4b8080;
+  overflow: hidden;
+}
+
+
+
+.desktop {
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+}
+
+.icon {
+  text-align: center;
+  color: white;
+  width: 80px;
+  cursor: pointer;
+}
+
+.icon-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 5px auto;
+  object-fit: contain;
+}
+
+
+.icon span {
+  font-size: 14px;
+}
+
+/* This is the css for the retro  */
+
+.retro-window {
+  position: absolute;
+  width: 600px;
+  background: #c0c0c0;
+  border: 3px solid;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  box-shadow: 6px 6px 0 #000;
+}
+
+.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.window-content {
+  padding: 24px;
+  text-align: center;
+}
+
+
+
+h1 {
+  margin: 10px 0;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background: #e0e0e0;
+  border: 2px inset #fff;
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  cursor: pointer;
+}
+
+
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
+  background: #c0c0c0;
+  border-top: 3px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.start-btn {
+  padding: 6px 12px;
+  font-weight: bold;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #000;
+  border-bottom-color: #000;
+  cursor: pointer;
+}
+
+.clock {
+  background: #d0d0d0;
+  padding: 6px 10px;
+  border: 2px inset #fff;
+}
+.shield {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px auto;
+  object-fit: contain;
+}
+
+
+
+.folder-desktop {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.folder-desktop .icon {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.folder-desktop .icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.hidden {
+  display: none;
+}
