@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>CYLOCK</title>
   <link rel="stylesheet" href="../css/welcome.css">
+  <link rel="icon" type="image/x-icon" href="../assets/fav/favicon.ico">
 </head>
 
 <body>
@@ -17,13 +18,15 @@
   </div>
 
 <!-- LSo when the levvel 1 folder is clicked it becomes hidden  -->
-<div id="level1-window" class="retro-window center hidden">
+<div id="level1-window"
+     class="retro-window center hidden"
+     data-icon="../assets/images/folder.png">
   <div class="window-content">
     <h2>Level 1</h2>
     <div class="desktop-level1">
 <!-- So this openfeatute is yet to be implemented   -->
       <div class="icon" onclick="openFeature('phishing')">
-        <img class="icon-img" src="../assets/images/phishing.png" alt="Phishing Test">
+        <img class="icon-img" src="../assets/images/phishingmail.png" alt="Phishing Test">
         <span>Phishing<br>Test</span>
       </div>
 
@@ -46,11 +49,45 @@
     <button onclick="closeFolder('level1')">Close</button>
   </div>
 </div>
-<!-- this is the main window -->
-<div class="retro-window center">
-  <div class="window-content">
 
-    <img class="shield" src="../assets/images/logo.png" alt="Shield">
+<div id="level2-window"
+     class="retro-window center hidden"
+     data-icon="../assets/images/folder.png">
+  <div class="window-content">
+    <h2>Level 2</h2>
+    <div class="desktop-level1">
+<!-- So this openfeatute is yet to be implemented   -->
+
+
+    </div>
+    <button onclick="closeFolder('level2')">Close</button>
+  </div>
+</div>
+<!-- this is the main window -->
+<div id="welcome-window"
+     class="retro-window center"
+     data-icon="../assets/images/taskicon.png">
+  <div class="window-header">
+    <span class="window-title">CyLock</span>
+    <div class="window-controls">
+  <button onclick="minimizeWindow('welcome-window')">
+    <img src="../assets/images/minimize.png" alt="Minimize">
+  </button>
+
+  <button onclick="maximizeWindow('welcome-window')">
+    <img src="../assets/images/maximize.png" alt="Maximize">
+  </button>
+
+  <button onclick="closeWindow('welcome-window')">
+    <img src="../assets/images/delete.png" alt="Close">
+  </button>
+</div>
+
+  </div>
+  <div class="window-content">
+<!-- this is the main window -->
+   <!-- <img class="shield" src="../assets/images/shield.png" alt="Shield">-->
+    <div class="shield">🛡️</div>
     <h1>Welcome to CyLock</h1>
     <p class="subtitle">Retro Security Awareness Platform</p>
 
@@ -59,15 +96,27 @@
       <p>Double-click the desktop icons to begin your training.</p>
     </div>
 
-    <button class="primary-btn">Get Started</button>
+     <button class="primary-btn" onclick="showLevelModal()">Get Started </button>
 
   </div>
 </div>
 
-<!-- Taskbar -->
+<div id="level-modal" class="modal hidden">
+  <div class="modal-content retro-window center">
+    <h2>How well do you know about cybersecurity</h2>
+    <div class="level-buttons">
+      <button onclick="selectLevel('Beginner')">Beginner</button>
+      <button onclick="selectLevel('Intermediate')">Intermediate</button>
+      <button onclick="selectLevel('Advanced')">Advanced</button>
+    </div>
+  </div>
+</div>
+
+<!-- so for the Taskbar, when the minimize is used it stores them -->
 <div class="taskbar">
-  <button class="start-btn"> Start</button>
+  <button class="start-btn"> 🛡️ Start</button>
   <div class="clock" id="clock"></div>
+  <div class="taskbar-windows"></div>
 </div>
 
 <script src="../js/windows.js"></script>
