@@ -17,6 +17,24 @@
     <span>Level 1</span>
   </div>
 
+  <!-- for Level 2 folder -->
+<div class="icon" onclick="openFolder('level2')">
+  <img class="icon-img" src="../assets/images/folder.png" alt="Level 2">
+  <span>Level 2</span>
+</div>
+
+<!-- For Level 3 folder -->
+<div class="icon" onclick="openFolder('level3')">
+  <img class="icon-img" src="../assets/images/folder.png" alt="Level 3">
+  <span>Level 3</span>
+</div>
+
+<!-- This is the About icon -->
+<div class="icon" onclick="openAbout()">
+  <div class="emoji-icon">ℹ️</div>
+  <span>About</span>
+</div>
+
 <!-- LSo when the levvel 1 folder is clicked it becomes hidden  -->
 <div id="level1-window"
      class="retro-window center hidden"
@@ -56,13 +74,26 @@
   <div class="window-content">
     <h2>Level 2</h2>
     <div class="desktop-level1">
-<!-- So this openfeatute is yet to be implemented   -->
+<!-- To be impleis yet to be implemented   -->
 
 
     </div>
     <button onclick="closeFolder('level2')">Close</button>
   </div>
+
+
+<div id="level3-window"
+     class="retro-window center hidden"
+     data-icon="../assets/images/folder.png">
+  <div class="window-content">
+    <h2>Level 3</h2>
+    <div class="desktop-level3">
+      <!-- Level 3 icons/features go here -->
+    </div>
+    <button onclick="closeFolder('level3')">Close</button>
+  </div>
 </div>
+
 <!-- this is the main window -->
 <div id="welcome-window"
      class="retro-window center"
